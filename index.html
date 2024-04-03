@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 26</title>
+    <style>
+        body{
+            background-color: #FBDA61;
+            background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+            min-height: 100vh;
+        }
+        .app-title{
+            text-align: center;
+            padding-top: 60px;
+        }
+        .emoji-container{
+            background-color: white;
+            width: 470px;
+            display: flex;
+            justify-content: center;
+            margin: 10px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+        .emoji1{
+            height: 250px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        .btn-toggle{
+            font-size: 20px;
+            padding: 5px 20px;
+            border-radius: 40px;
+            border: none;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .btn-toggle:hover{
+            box-shadow: 0 0 10px black;
+
+        }
+        @media screen and (max-width(600px)) {
+            .emoji-container{
+                width: 80%;
+            }
+            .emoji1{
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Emotion Toggler</h1>
+    <div class="emoji-container">
+        <img src="./img/smiling.png" class="emoji1" id="1Emoji" />
+    </div>
+    <div class="btn-container">
+        <button class="btn-toggle" onclick="toggleEmoji('smile')">Smiling</button>
+        <button class="btn-toggle" onclick="toggleEmoji('love')">Love</button>
+        <button class="btn-toggle" onclick="toggleEmoji('wink')">Wink</button>
+        <button class="btn-toggle" onclick="toggleEmoji('surprise')">Surprised</button>
+    </div>
+
+    <script>
+        function toggleEmoji(state){
+            const emojiElement = document.getElementById("1Emoji");
+            if(state =='smile'){
+                emojiElement.src = './img/smiling.png';
+            }
+            else if(state == 'love')
+            {
+                emojiElement.src = './img/love.png';
+            }
+            else if(state == 'wink')
+            {
+                emojiElement.src = './img/wink.png';
+            }
+           else if(state == 'surprise')
+           {
+                emojiElement.src = './img/surprised.png';
+           }
+        }
+    
+    </script>
+</body>
+</html>
